@@ -63,14 +63,14 @@ h3
 {
 font-size: 1.7em;
 padding-right: 34px;
-background-image: url('images/db1.gif');
+background-image: url('images/db1.jpg');
 }
 
 h4
 {
 font-size: 1.2em;
 padding-right: 28px;
-background-image: url('images/db2.gif');
+background-image: url('images/db2.jpg');
 }
 
 .contentarea
@@ -317,7 +317,7 @@ text-decoration: underline;
 
 #menu ul li a.active
 {
-background: #7F8400 url('images/menuactive.gif') repeat-x top left;
+background: #7F8400 url('images/menuactive.jpg') repeat-x top left;
 }
 
 #menubottom
