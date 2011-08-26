@@ -11,7 +11,7 @@
 <title>pGina</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="stylesheet" type="text/css" href="default.css" />
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/default.css" />
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 			<h1>pGina</h1>
 			<h2>Open Source Windows Authentication</h2>
 		</div>
-		<div id="logo"><img src="images/pginalogo.png" /></div>
+		<div id="logo"><img src="{{site.baseurl}}/images/pginalogo.png" /></div>
 	</div>
 
 	
@@ -33,7 +33,7 @@
 			<li><a href="news.html"{% if page.pageid == "News" %} class="active"{%endif%}>News</a></li>
 			<li><a href="#">Download</a></li>
 			<li><a href="#">Plugins</a></li>
-			<li><a href="#">Documentation</a></li>
+			<li><a href="/docs">Documentation</a></li>
 		</ul>
 	</div>
 	<div id="menubottom"></div>
@@ -48,7 +48,7 @@
 			<div class="contentarea">
 				<!-- Normal content area start -->
 
-				<img src="images/pginalogo_simple.png" class="left" alt="pGina logo" />
+				<img src="{{site.baseurl}}/images/pginalogo_simple.png" class="left" alt="pGina logo" />
 				<p>pGina is a pluggable Open Source GINA and CredentialProvider 
 				replacement. Plugins are written in managed code and allow for 
 				user authentication, session management and login time actions.</p>
