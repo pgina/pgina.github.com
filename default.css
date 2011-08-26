@@ -159,13 +159,11 @@ background-image: url('images/icon-more.gif');
 .box
 {
 position: relative;
-/*background: #FDFCF6 url('images/boxbg.gif') repeat-x;*/
-background: #3eb5bb url('images/boxbg.gif') repeat-x;
+background: #FDFCF6 url('images/boxbg.gif') repeat-x;
 left: -1.5em;
 top: -1.5em;
 padding: 1.5em;
-/*border-bottom: solid 1px #E1D2BD;*/
-border-bottom: solid 1px #3eb5bb;
+border-bottom: solid 1px #E1D2BD;
 margin-bottom: 1.0em;
 }
 
@@ -287,7 +285,8 @@ margin-bottom: 2px;
 #menu
 {
 position: relative;
-background: #7F8400 url('images/menubg.jpg') repeat-x top left;
+/*background: #7F8400 url('images/menubg.jpg') repeat-x top left;*/
+background: #36bc67 url('images/menubg.jpg') repeat -x top left; 
 height: 3.5em;
 padding: 0em 1.0em 0em 1.0em;
 margin-bottom: 2px;
