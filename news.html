@@ -8,7 +8,7 @@ pageid: News
 <div class="post">
 	<h4>{{ p.title }}</h4>
 	<div class="contentarea">
-	<div class="details">Posted by <a href="#">{{ p.author }}</a> on 
+	<div class="details">Posted by {{ p.author }} on 
 	{{ p.date | date: "%B %d, %Y" }}</div>
 {{ p.content }}
 	</div>
