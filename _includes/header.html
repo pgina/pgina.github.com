@@ -31,7 +31,7 @@
 		<ul>
 			<li><a href="index.html"{% if page.pageid == "Home" %} class="active"{%endif%}>Home</a></li>
 			<li><a href="news.html"{% if page.pageid == "News" %} class="active"{%endif%}>News</a></li>
-			<li><a href="#">Download</a></li>
+			<li><a href="download.html"{% if page.pageid == "Download" %} class="active"{%endif%}>Download</a></li>
 			<li><a href="#">Plugins</a></li>
 			<li><a href="/docs">Documentation</a></li>
 		</ul>
@@ -50,8 +50,10 @@
 
 				<img src="{{site.baseurl}}/images/pginalogo_simple.png" class="left" alt="pGina logo" />
 				<p>pGina is a pluggable Open Source GINA and CredentialProvider 
-				replacement. Plugins are written in managed code and allow for 
-				user authentication, session management and login time actions.</p>
+				replacement. This allows for alternate methods of interactive user 
+                                authentication and access management on machines running the Windows 
+                                operating system.  Plugins are written in managed code and allow for 
+				user authentication, authorization and session management.</p>
 				<!-- Normal content area end -->
 			</div>
 		</div>
