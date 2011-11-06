@@ -7,7 +7,67 @@ pageid: FAQ
 <div id="normalcontent">
   <h4><span>Frequently Asked Questions</span></h4>
   <div class="contentarea">
-  <p>TBD</p>
+  <ul>
+   <li><a href="#versions">What platforms does pGina support?</a></li>
+   <li><a href="#rewrite">Why a ground up re-write for 3.x?</a></li>
+   <li><a href="#incplugins">What plugins are included with pGina?</a></li>
+   <li><a href="#caniuse">Can I authenticate my users with ...?</a></li>
+  </ul>
+  <div class="divider2"></div>
+  <p id="versions"><strong>What platforms does pGina support?</strong> - Version 3.0 supports x86 and x64 versions of windows starting with Windows XP SP3 and continuing to the latest available version (Windows 8 Developer Preview as of this writing).</p>
+
+  <p id="rewrite"><strong>Why a ground up re-write for 3.x?</strong> - The previous versions of pGina imposed
+  some artificial limitations, suffered from an extended period of relative bit-rot, and were generally
+  built upon an initial proof-of-concept codebase that highly reflected the early stages of an ongoing 
+  education in software development.  Having the last 10 years of experience to draw on, the development team
+  decided to re-imagine what pGina could do and how it could do it.  As part of this, nothing was off the
+  table, including a complete re-write.  While the decision to undertake a re-write was not taken lightly
+  (we generally disagree with this approach, as prevalent as it seems to be in software development these
+  days), it became clear that this was our best bet to providing a truly exceptional version of pGina.
+  A ground-up re-write allowed us to also completely re-work how pGina functions at a fundamental level.  The
+  following detail some of the things we have accomplished as a result.
+  </p>
+  <p>
+  <i>GINA vs CredentialProvider</i>: While 1.x and 2.x diverged in their supported platforms as a result of being tightly tied to their core
+  implementation (1.x as a GINA and 2.x as a CredentialProvider), we decided that this was a 'leaky 
+  abstraction' that users should not care about.  GINA, CredentialProvider, WidgetOfTheMonth, who cares? 
+  Users just want to download the most current version, install it, and use it.  3.x includes both a GINA
+  <strong>and</strong> a CredentialProvider.  The correct one for the system in use is automatically used.
+  </p>
+  <p>
+  <i>x86 vs x64</i>: Similar to the supported platform issue, the original codebase pre-dates the
+  availability of managed languages, x64 platforms, and other concepts that are considered standard today. 
+  3.0 is implemented primarily in managed code (C#) which is built as a platform agnostic binary, allowing
+  it to take advantage of and work in both x64 and x86 environments.  Any non-agnostic binaries are included
+  in both x86 and x64 flavors, and the correct one is used accordingly.  Again, users should not care! They just download and install!
+  </p>
+  <p>
+  <i>Plugin API</i>: The previous plugin API was severly limited.  Most features were implemented in 
+  the core pGina codebase itself.  Only a single plugin could be loaded at a time, plugins had to be
+  built in C/C++ and compiled as the same architecture as pGina and the Windows platform in use.  These
+  were normal constraints in 2000, but are no longer acceptable.  3.0 provides a straightforward and 
+  extendable API as a managed interface in C#.  Additional support assemblies are provided to make common
+  plugin tasks (logging, environment examination, information sharing) straightforward.  Any number of 
+  plugins can be loaded, can be platform agnostic, and are configurable from a single consolidated UI. 
+  We firmly believe that the 3.0 approach provides the best developer AND user plugin experience possible.
+  In fact, large portions of what used to be pGina core code features (local user account management) are themselves
+  now implemented as plugins!
+  </p>
+
+  <p id="incplugins"><strong>What plugins are included with pGina?</strong> - As of this writing, the
+  available plugins out-of-box are LDAP Authentication, MySQL Authentication, MySQL Logging, Single User,
+  Local Machine (SAM), Session Limit.  We expect to add more as they become available or are provided
+  by the community.</p>
+
+  <p id="caniuse"><strong>Can I authenticate my users with ...?</strong> - Yes! Or at least, most likely!
+  pGina's out-of-box plugins may or may not support your technology of choice.  However, most single-factor
+  authentication backends can be supported pretty easily.  pGina's architecture is extremely flexible, and
+  is plugin driven - so in all likelihood, a plugin could be created for your backend of choice.  If your
+  backend isn't supported by an out-of-box plugin you're best bet is to create your own plugin (or have
+  someone do so for you).  Plugins are written in managed code (generally C#) and are fairly trivial to
+  create (aside from the backend specific logic you must implement).  See our documentation and email the 
+  developer mailing list for more information.  Of course, if you implement a plugin that may be useful to
+  others, we'd love to host it on the pGina site or even include it in future installer revisions!</p>
   </div>
 
 </div>
