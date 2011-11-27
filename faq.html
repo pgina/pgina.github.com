@@ -11,6 +11,7 @@ pageid: FAQ
    <li><a href="#rewrite">Why a ground up re-write for 3.x?</a></li>
    <li><a href="#incplugins">What plugins are included with pGina?</a></li>
    <li><a href="#caniuse">Can I authenticate my users with ...?</a></li>
+   <li><a href="#lsaauth">Do shared services and devices authenticate with pGina?</a></li>
   </ul>
   <div class="divider2"></div>
   <p id="versions"><strong>What platforms does pGina support?</strong> - Version 3.0 supports x86 and x64 versions of windows starting with Windows XP SP3 and continuing to the latest available version (Windows 8 Developer Preview as of this writing).</p>
@@ -68,5 +69,15 @@ pageid: FAQ
   developer mailing list for more information.  Of course, if you implement a plugin that may be useful to
   others, we'd love to host it on the pGina site or even include it in future installer revisions!</p>
   </div>
+  
+  <p id="lsaauth"><strong>Do shared services and devices authenticate users via pGina?</strong> - No.  pGina
+  is intended as a replacement for the *interactive* login process.  Access to items like printers, 
+  drives/folders, etc - do not use the portion of the OS that pGina provides replacements for.  That said,
+  the 3.x architecture does allow for this kind of thing in the future, by moving much (arguably all) actual
+  processing into a dedicated service, *any* part of the OS which can be augmented, could potentially
+  validate credentials using the pGina framework.  For things like shared services, this would require an 
+  LSA module.  This is outside the scope of the pGina project, but we've tried to make it flexible enough
+  that experimentation in this area could be done!
+  </p>
 
 
