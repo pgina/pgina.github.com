@@ -28,7 +28,8 @@ color: #333333;
 p
 {
 line-height: 1.5em;
-margin-bottom: 1.0em;
+margin-bottom: 0.5em;
+margin-top: 0.5em;
 /*text-align: justify;*/
 }
 
