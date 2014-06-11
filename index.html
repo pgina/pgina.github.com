@@ -1,22 +1,71 @@
 ---
-layout: default
-title: pGina
-pageid: Home
+layout: bootstrap
 ---
 
-<h3><span>Latest News</span></h3>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"><img src="images/pginalogo_jumbo.png"></div>
+          <div class="col-md-8">
+            <h1>pGina</h1>
+            <p>pGina is a pluggable, open source credential provider (and GINA)
+              replacement.  It allows for alternate methods of interactive user
+              authentication and access management on machines running the Windows
+              operating system.</p>
+            <p><a class="btn btn-primary btn-lg" role="button" href="download.html">Download pGina</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="divider2"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Windows Authentication without Active Directory</h2>
+          <p>pGina is a flexible replacement for the default Windows credential
+          provider (or GINA on XP and earlier systems).  With pGina, you can
+          integrate Windows clients into existing, heterogeneous identity managment systems.
+          With pGina, you can support Windows clients with a
+          single OpenLDAP database or other identity storage backend, without
+          the overhead of a full Active Directory installation.</p>
+       </div>
+        <div class="col-md-4">
+          <h2>Plugin Architecture</h2>
+          <p>With plugins, you can support authentication and authorization of
+            Windows users using the backend of
+            your choice. Plugins are written in managed code and allow for user
+            authentication, authorization and session management. End result is
+            that you, the admin, can choose how your users are authenticated,
+            authorized and managed. Already have users in LDAP? Want to manage
+            your users with a MySQL database? Using a custom backend and want
+            to craft your own authentication code? pGina is the solution.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Open Source</h2>
+          <p>pGina is open source, released under the permissive BSD license.
+            Our source code is hosted on
+            <a href="https://github.com/pgina/pgina">GitHub</a>.
+            pGina developers and users alike count on each other to provide a
+            community for the continued support and future of pGina.
+            The community is supported in part by our mailing lists for
+            <a href="http://groups.google.com/group/pgina-general">users</a>
+            and
+            <a href="http://groups.google.com/group/pgina-devel">developers</a>.
+            Documentation is hosted on the <a href="https://github.com/pgina/pgina">GitHub wiki</a>.  Issues,
+            bugs and feature requests are managed via the
+            <a href="https://github.com/pgina/pgina/issues">GitHub issue
+              tracker</a>
+          </p>
+        </div>
+      </div>
+    </div>
 
-{% for p in site.posts %}
-<div class="post">
-	<h4>{{ p.title }}</h4>
-	<div class="contentarea">
-	<div class="details">Posted by {{ p.author }} on 
-	{{ p.date | date: "%B %d, %Y" }}</div>
-{{ p.content }}
-	</div>
-</div>
-
-{% if forloop.last != true %}<div class="divider2"></div>{% endif %}
-{% endfor %}
+    <div class="container">
+      <h2>Plugins</h2>
+      <hr>
+      <p>pGina comes with a lot of plugins out of the box (MySQL, LDAP, Logging, Single User, ...).
+      All of the built-in plugins are documented in our <a href="https://github.com/pgina/pgina/wiki">documentation</a> pages.
+      However, the whole point of having a plugin model is so that you, the end user, can choose the
+      method and style of user authentication, authorization and management that you wish to use.</p>
+    </div>

@@ -1,3 +1,9 @@
-auto: true
 permalink: date
-server: true
+
+markdown: kramdown
+
+kramdown:
+  entity_output: symbolic
+  enable_coderay: true
+  coderay_css: style
+  coderay_line_numbers: nil
